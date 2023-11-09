@@ -1,9 +1,9 @@
-ARG RUBY_VERSION=3.2.0
+ARG RUBY_VERSION=3.2.2
 
 FROM ruby:$RUBY_VERSION-slim
 
 # Install dependencies
-RUN apt-get update -qq && apt-get install -y build-essential libvips gnupg2 curl git
+RUN apt-get update -qq && apt-get install -y build-essential libvips gnupg2 curl git firefox-esr
 
 # Ensure node.js 18 is available for apt-get
 ARG NODE_MAJOR=18
